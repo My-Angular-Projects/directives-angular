@@ -1,0 +1,4 @@
+<dr-simple-card #hlRef="hightlighter" [hightlight]="false" (hightLightChange)="onHightLightChange($event)" />
+<div class="actions">
+    <button class="action" (click)="hlRef.toggle()">toggle</button>
+</div>

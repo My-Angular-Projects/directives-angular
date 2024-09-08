@@ -1,0 +1,12 @@
+:host.cards-list {
+  display: block;
+}
+
+.actions {
+  display: flex;
+  margin-top: 20px;
+
+  & >.action {
+    text-transform: uppercase;
+  }
+}

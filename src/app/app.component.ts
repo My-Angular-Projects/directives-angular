@@ -1,17 +1,12 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { SimpleCardComponent } from './components/simple-card/simple-card.component';
-import { HightlightDirective } from './directives';
+import { CardsListComponent } from './components/cards-list/cards-list.component';
 
 @Component({
   selector: 'dr-root',
   standalone: true,
-  imports: [SimpleCardComponent, HightlightDirective],
+  imports: [CardsListComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class AppComponent {
-  public onHightLightChange(event: boolean): void {
-    console.log(event);
-  }
-}
+export class AppComponent {}

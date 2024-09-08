@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
   selector: 'dr-simple-card',
@@ -10,6 +10,4 @@ import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
     class: 'simple-card',
   },
 })
-export class SimpleCardComponent implements OnInit {
-  ngOnInit(): void {}
-}
+export class SimpleCardComponent {}

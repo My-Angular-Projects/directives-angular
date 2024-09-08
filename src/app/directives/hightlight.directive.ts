@@ -2,6 +2,7 @@ import { Directive, EventEmitter, HostBinding, HostListener, Input, Output } fro
 
 @Directive({
   selector: '[hightlight]',
+  exportAs: 'hightlighter',
   standalone: true,
 })
 export class HightlightDirective {
@@ -25,6 +26,11 @@ export class HightlightDirective {
   @HostListener('mouseleave')
   public onMouseLeave() {
     this.hightlight = false;
+    this.hightLightChange.emit(this.hightlight);
+  }
+
+  public toggle(): void {
+    this.hightlight = !this.hightlight;
     this.hightLightChange.emit(this.hightlight);
   }
 }
