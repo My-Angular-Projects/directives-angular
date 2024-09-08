@@ -1,0 +1,19 @@
+:host.simple-card {
+    display: block;
+    padding: 30px 20px;
+    outline: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.card-title {
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.card-content {
+    margin-bottom: 20px;
+}
+
+.card-actions {
+    display: flex;
+}
