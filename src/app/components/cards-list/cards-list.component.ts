@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { AfterViewInit, ChangeDetectionStrategy, Component, ViewChild } from '@angular/core';
 import { SimpleCardComponent } from '../simple-card/simple-card.component';
 import { HightlightDirective } from '../../directives';
 
@@ -13,8 +13,15 @@ import { HightlightDirective } from '../../directives';
     class: 'cards-list',
   },
 })
-export class CardsListComponent {
+export class CardsListComponent implements AfterViewInit {
   public onHightLightChange(event: boolean): void {
     console.log(event);
+  }
+
+  @ViewChild(SimpleCardComponent, { read: HightlightDirective })
+  public hightlightDirective!: HightlightDirective;
+
+  ngAfterViewInit(): void {
+    console.log(this.hightlightDirective);
   }
 }
